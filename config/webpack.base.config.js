@@ -6,7 +6,7 @@ const BASE_DIR = path.resolve(__dirname, '../');
 const PUBLIC_DIR = path.resolve(BASE_DIR, './public');
 
 module.exports = {
-  entry: ['react-hot-loader/patch', path.resolve(BASE_DIR, './src/index.js')],
+  entry: path.resolve(BASE_DIR, './src/index.js'),
   output: {
     path: path.resolve(BASE_DIR, './dist'),
     publicPath: '/',
