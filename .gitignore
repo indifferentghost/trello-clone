@@ -1,0 +1,29 @@
+# Project dependencies
+.cache
+node_modules/
+
+# Environment variables
+.env
+
+# Debug logs
+yarn-debug.log*
+yarn-error.log*
+
+# Build directory
+/dist
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# MacOS
+.DS_Store
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
