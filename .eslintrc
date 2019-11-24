@@ -68,7 +68,7 @@
       {
         "props": true,
         "ignorePropertyModificationsFor": [
-          "draft"
+          "state"
         ]
       }
     ],

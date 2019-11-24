@@ -1,15 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
+import store from './store';
 
-function App() {
-  const [val, setVal] = useState(2);
-  return (
-    <>
-      <div>Hello {val}</div>
-      {/* eslint-disable-next-line react/button-has-type */}
-      <button onClick={() => setVal(val + 1)}>increment</button>
-    </>
+const render = () => {
+  // eslint-disable-next-line global-require
+  const App = require('./App').default;
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <Router>
+        <App />
+      </Router>
+    </Provider>,
+    document.getElementById('root'),
   );
-}
+};
 
-ReactDOM.render(<App />, document.getElementById('root'));
+render();
+
+if (process.env.NODE_ENV === 'development' && module.hot) {
+  module.hot.accept('./App', render);
+}
