@@ -1,6 +1,5 @@
 {
   "presets": [
-    "@babel/preset-react",
     [
       "@babel/preset-env",
       {
@@ -9,7 +8,9 @@
           "browsers": "last 1 version"
         }
       }
-    ]
-  ]
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": ["@babel/plugin-transform-runtime"]
 }
 

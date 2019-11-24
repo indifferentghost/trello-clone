@@ -1,17 +1,18 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import store from './store';
 
-const render = () => {
-  // eslint-disable-next-line global-require
-  const App = require('./App').default;
+const render = async () => {
+  const App = await import('./App').then(app => app.default);
 
   ReactDOM.render(
     <Provider store={store}>
       <Router>
-        <App />
+        <Suspense fallback={<span>Loading...</span>}>
+          <App />
+        </Suspense>
       </Router>
     </Provider>,
     document.getElementById('root'),
