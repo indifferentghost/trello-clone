@@ -17,7 +17,7 @@
   },
   "settings": {
     "react": {
-      "version": "latest"
+      "version": "16.12.0"
     }
   },
   "plugins": [
@@ -87,7 +87,8 @@
         "ignorePureComponents": true
       }
     ],
-    "react/require-default-props": 0
+    "react/require-default-props": 0,
+    "react/jsx-filename-extension": 0
   }
 }
 
