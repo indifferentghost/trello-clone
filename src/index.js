@@ -1,20 +1,21 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { ErrorHandler } from '@/shared/error';
 import store from './store';
 
 const render = async () => {
   const App = await import('./App').then(app => app.default);
 
   ReactDOM.render(
-    <Provider store={store}>
-      <Router>
-        <Suspense fallback={<span>Loading...</span>}>
+    <ErrorHandler>
+      <Provider store={store}>
+        <Router>
           <App />
-        </Suspense>
-      </Router>
-    </Provider>,
+        </Router>
+      </Provider>
+    </ErrorHandler>,
     document.getElementById('root'),
   );
 };

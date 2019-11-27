@@ -88,7 +88,8 @@
       }
     ],
     "react/require-default-props": 0,
-    "react/jsx-filename-extension": 0
+    "react/jsx-filename-extension": 0,
+    "react/state-in-constructor": [1, "never"]
   }
 }
 
