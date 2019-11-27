@@ -8,7 +8,7 @@
     "prettier": "prettier --config ./.prettierrc --ignore-path ./.prettierignore \"./src/*.+(js|json|yml|yaml|css|less|md|graphql|mdx)\"",
     "test": "npm run lint",
     "dev:start": "webpack-dev-server --config config/webpack.dev.config.js",
-    "dev:server": "cross-env NODE_ENV=development nodemon ./server/server.js --watch ./server"
+    "dev:server": "cross-env NODE_ENV=development node ./scripts/start-server.js"
   },
   "husky": {
     "hooks": {

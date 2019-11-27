@@ -33,7 +33,8 @@
         "devDependencies": [
           "config/**/*.js",
           "**/webpack.*.js",
-          "*.config.js"
+          "*.config.js",
+          "scripts/**/*.js"
         ],
         "optionalDependencies": false
       }
