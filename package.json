@@ -7,6 +7,7 @@
     "lint": "eslint '*.js'",
     "prettier": "prettier --config ./.prettierrc --ignore-path ./.prettierignore \"./src/*.+(js|json|yml|yaml|css|less|md|graphql|mdx)\"",
     "test": "npm run lint",
+    "build": "webpack --config config/webpack.prod.config.js",
     "dev": "npm-run-all --parallel dev:*",
     "dev:start": "webpack-dev-server --config config/webpack.dev.config.js",
     "dev:server": "cross-env NODE_ENV=development node ./scripts/start-server.js"
@@ -20,6 +21,7 @@
     "@babel/runtime": "^7.7.4",
     "@reduxjs/toolkit": "^1.0.4",
     "fastify": "^2.10.0",
+    "fastify-static": "^2.5.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

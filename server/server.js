@@ -1,4 +1,13 @@
+const path = require('path');
 const server = require('fastify')();
+
+if (process.env.NODE_ENV === 'production') {
+  // eslint-disable-next-line global-require
+  const fastifyStatic = require('fastify-static');
+  server.register(fastifyStatic, {
+    root: path.resolve(__dirname, '../dist'),
+  });
+}
 
 server.register(require('./routes/tasks'), { prefix: '/api' });
 
