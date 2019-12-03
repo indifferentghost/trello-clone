@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import { Kanban } from '@/Kanban/Kanban';
+import { Kanban } from '@/kanban/Kanban';
 
 function App() {
   return (

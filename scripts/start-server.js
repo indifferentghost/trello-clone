@@ -4,6 +4,8 @@ const { nodemonTitle, YELLOW, RED } = require('./script-colors');
 nodemon({
   script: 'server/server.js',
   watch: ['server/'],
+  stdout: true,
+  // nodeArgs: ['--inspect-brk'],
 });
 
 nodemon.on('start', () => {
