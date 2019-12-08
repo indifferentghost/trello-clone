@@ -4,7 +4,7 @@
 - Login/Sign up
 - Kanban Board
 
-#### TODO:
+## TODO:
 
 - TypeScript
 - GraphQL
